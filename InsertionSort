@@ -1,0 +1,17 @@
+def ins(list):
+    for i in range(1 , len(list)):
+        if list[i-1] > list [i]:
+            list[i], list[i-1] = list[i-1], list[i];
+            j = i - 1;
+            while j > 0:
+                if list[j-1] > list [j]:
+                    list[j-1], list[j] = list[j], list[j-1];
+                else:
+                    break
+                j = j - 1;
+    return list
+
+
+a = [7,3,1,2,10,6,-1,8,50,3]; #input
+b = ins(a);
+print (b);
